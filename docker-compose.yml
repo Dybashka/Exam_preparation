@@ -8,7 +8,7 @@ services:
     restart: always
     environment:
       POSTGRES_PASSWORD: 123456
-      POSTGRES_USER: admin
+      POSTGRES_USER: darya
       POSTGRES_DB: flask_db
     volumes:
       - ./date_postgres:/var/lib/postgresql/data
