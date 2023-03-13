@@ -3,13 +3,13 @@ version: '3'
 services:
 
   database:
-    container_name: flask_db
+    container_name: delivery_service
     image: postgres
     restart: always
     environment:
       POSTGRES_PASSWORD: 123456
       POSTGRES_USER: darya
-      POSTGRES_DB: flask_db
+      POSTGRES_DB: delivery_service
     volumes:
       - ./date_postgres:/var/lib/postgresql/data
     ports:
