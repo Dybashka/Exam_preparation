@@ -17,7 +17,7 @@ services:
 
   app:
     container_name: ex
-    image: daryabalashova/ex:v1
+    image: dybashka/ex
     build:
       context: .
       dockerfile: Dockerfile
