@@ -1,7 +1,6 @@
 FROM ubuntu
 
 WORKDIR /home/ex
-COPY . /home/ex
 
 COPY requirements.txt requirements.txt
 
