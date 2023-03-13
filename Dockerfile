@@ -1,14 +1,12 @@
 FROM ubuntu
 
-COPY . /home/ex
 WORKDIR /home/ex
+COPY . /home/ex
 
-ENV VIRTUAL_ENV=/opt/venv
+COPY requirements.txt requirements.txt
 
-RUN apt-get update && apt-get install -y python3 && apt install -y python3.10-venv && python3 -m venv $VIRTUAL_ENV
+RUN pip install -r requirements.txt
 
-ENV PATH="$VIRTUAL_ENV/bin:$PATH"
-
-RUN pip3 install -r requirements.txt
+COPY . .
 
 CMD ["python", "app.py"]
